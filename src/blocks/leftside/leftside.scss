@@ -1,0 +1,50 @@
+.leftside {
+	$self: &;
+	max-width: 375px;
+	// width: 100%;
+	padding-left: 5.28333%;
+	box-sizing: border-box;
+	position: fixed;
+	z-index: 1000;
+
+	@include media ("<=xxxlg") {
+		padding-left: 50px;
+	}
+
+	@include media ("<=xlg") {
+		padding-left: 30px;
+	}
+
+	@include media ("<=lg") {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		align-items: center;
+		height: 100vh;
+		right: -310px;
+		top: 0;
+		max-width: 300px;
+		width: 100%;
+		padding: 126px 20px 30px;
+		background-color: #fff;
+		box-shadow: 0 5px 20px rgba(0, 0, 0, .12);
+		transition: right .3s ease-in;
+		overflow: auto;
+
+		&.opened {
+			right: 0;
+		}
+	}
+
+	&__logo {
+		display: block;
+		margin-bottom: 70px;
+		margin-top: 65px;
+
+		@include media ("<=lg") {
+			margin: 0 auto 40px;
+		}
+	}
+
+}

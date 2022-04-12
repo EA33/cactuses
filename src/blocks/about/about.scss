@@ -1,0 +1,161 @@
+.about {
+	$self: &;
+	margin: 220px 0 242px;
+	@include media ("<=xxlg"){
+		margin: 190px 0 183px;
+	}
+	@include media ("<=md"){
+		margin: 190px 0 149px;
+	}
+	@include media ("<=sm"){
+		margin: 70px 0;
+	}
+
+	&__title {
+		font-size: 42px;
+		line-height: 52px;
+		margin-bottom: 25px;
+		text-transform: capitalize;
+		span {
+			font-family: "HM", sans-serif;
+		}
+		@include media ("<=md"){
+			font-size: 26px;
+			line-height: 40px;
+		}
+	}
+
+	&__inner {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+		background-color: $bg;
+		@include media ("<=sm"){
+			flex-wrap: wrap;
+	}
+}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		max-width: 821px;
+		min-width: 418px;
+		margin-left: 50px;
+		margin-right: 50px;
+		@include media ("<=md"){
+			min-width: 300px;
+		}
+		@include media ("<=sm"){
+			max-width: 100%;
+			margin-right: 20px;
+			margin-left: 20px;
+		}
+		@include media ("<=xxs"){
+			min-width: 270px;
+		
+		}
+	}
+
+	&__left-title {
+		padding-top: 50px;
+		margin-bottom: 20px;
+		font-size: 23px;
+		line-height: 33px;
+		font-family: "HM", sans-serif;
+		@include media ("<=md"){
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+
+	&__left-text {
+		max-width: 771px;
+		margin-bottom: 50px;
+		font-size: 18px;
+		line-height: 26px;
+		@include media ("<=md"){
+			font-size: 16px;
+			line-height: 25.6px;
+		}
+		@include media ("<=md"){
+			margin-bottom: 30px;
+		}
+	}
+
+	&__left-img {
+		display: block;
+		max-width: 771px;
+		// margin-left: 50px;
+		margin-bottom: -158px;
+		@include media ("<=sm"){
+			margin-bottom: 30px;
+		}
+	}
+
+	&__right {
+		max-width: 400px;
+		margin-right: 50px;
+		@include media ("<=md"){
+			max-width: 100%;
+		}
+		@include media ("<=sm"){
+			margin-left: 20px;
+			margin-right: 20px;
+		}
+	}
+
+	&__right-img {
+		max-width: 418px;
+		display: block;
+		margin-top: -182px;
+		margin-bottom: 50px;
+		@include media ("<=sm"){
+			display: none;
+		}
+	}
+
+	&__right-title {
+		margin-bottom: 20px;
+		font-size: 23px;
+		line-height: 33px;
+		font-family: "HM", sans-serif;
+		@include media ("<=md"){
+			font-size: 20px;
+			line-height: 28px;
+		}
+	}
+
+	&__right-text {
+		margin-bottom: 25px;
+		font-size: 18px;
+		line-height: 26px;
+		@include media ("<=md"){
+			font-size: 16px;
+			line-height: 25.6px;
+		}
+	}
+
+
+	&__right-btnread {
+		display: inline-block;
+		font-family: "HB", sans-serif;
+		text-transform: uppercase;
+		transition: all 0.5s;
+		margin-bottom: 50px;
+		
+		&::after {
+			content: "";
+			margin-top: 3px;
+			display: block;
+			border-bottom: 1px solid #000;
+		}
+		&:hover {
+			color: $colorLink;
+			&::after {
+				border-color: $colorLink;
+			}
+		}
+
+	}
+
+}

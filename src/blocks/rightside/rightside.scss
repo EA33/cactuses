@@ -1,0 +1,145 @@
+.rightside {
+	$self: &;
+	max-width: 230px;
+	padding-right: 100px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+
+	@include media ("<=xxxlg") {
+		max-width: 95px;
+		padding-right: 30px;
+		padding-left: 20px;
+	}
+
+	@include media ("<=xxlg") {
+		display: none;
+	}
+
+	&__text {
+		writing-mode: vertical-lr;
+		margin-left: auto;
+		margin-bottom: 0;
+
+		&_indent {
+			margin-bottom: 60px;
+
+			@include media ("<=xxxlg") {
+				margin-bottom: 10px;
+			}
+		}
+
+	}
+
+	&__search {
+		position: relative;
+		width: 40px;
+		height: 50px;
+		flex-shrink: 0;
+		display: block;
+		background: url(images/icons-sprite.svg#icon-search-view-black) center left/ 25px 25px no-repeat transparent;
+		margin-top: 46px;
+		margin-bottom: auto;
+		margin-right: -20px;
+		z-index: 50;
+
+		@include media ("<=xxlg") {
+			margin-right: -15px;
+		}
+
+		&_top {
+			display: none;
+
+			@include media ("<=xxlg") {
+				display: block;
+				margin-top: 0;
+				margin-left: auto;
+
+				&:hover {
+					input[type="text"] {
+						background-color: #fff;
+						box-shadow: -4px 4px 10px #ddd;
+						width: 420px;
+
+						@include media('<=xlg') {
+							width: 320px;
+						}
+
+						@include media('<=xxs') {
+							width: 290px;
+						}
+
+						@include media('<=xxxs') {
+							width: 260px;
+						}
+					}
+				}
+
+			}
+		}
+
+		&:hover {
+			input[type="text"] {
+				background-color: #fff;
+				box-shadow: -4px 4px 10px #ddd;
+				width: 420px;
+
+				@include media('<=xlg') {
+					width: 320px;
+				}
+
+				@include media('<=xxs') {
+					width: 290px;
+				}
+
+				@include media('<=xxxs') {
+					width: 260px;
+				}
+			}
+		}
+
+		input[type="text"] {
+			@extend %reset-input;
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			padding: 0 30px 0 20px;
+			background-color: transparent;
+			transition: width 0.4s, background-color 0.4s;
+
+			&:focus {
+				background-color: #fff;
+				box-shadow: -4px 4px 10px #ddd;
+				width: 420px;
+
+				@include media('<=xlg') {
+					width: 320px;
+				}
+
+				@include media('<=xxs') {
+					width: 290px;
+				}
+
+				@include media('<=xxxs') {
+					width: 260px;
+				}
+			}
+		}
+
+		input[type="submit"] {
+			@extend %reset-button;
+			background: url(images/icons-sprite.svg#icon-search-view-black) center left/ 25px 25px no-repeat transparent;
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 100%;
+		}
+	}
+
+
+}

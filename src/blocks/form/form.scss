@@ -1,0 +1,66 @@
+.form {
+	$self: &;
+
+
+	&__text {
+		font-size: 20px;
+		line-height: 20px;
+		margin-top: 50px;
+
+		&:first-child {
+			margin-top: 0;
+		}
+	}
+
+	&__input {
+		box-sizing: border-box;
+		background: none;
+		border: none;
+		border-bottom: 1px solid #BEFFD3;
+		color: #BEFFD3;
+		outline: none;
+		padding: 14px 15px 15px;
+
+		&::placeholder {
+			color: #BEFFD3;
+		}
+
+		@include media ("<=xs") {
+			margin-bottom: 30px;
+		}
+	}
+
+	&__textarea {
+		min-height: 156px;
+		background: none;
+		border: 1px solid #BEFFD3;
+		padding: 15px;
+		box-sizing: border-box;
+		margin-bottom: 50px;
+		margin-top: 14px;
+		resize: none;
+		color: #BEFFD3;
+		outline: none;
+
+		&::placeholder {
+			color: #BEFFD3;
+		}
+	}
+
+	&__btn {
+		padding: 15px 30px;
+		min-width: 163px;
+		background: none;
+		border: 1px solid #BEFFD3;
+		font-family: "HBL", sans-serif;
+		text-transform: uppercase;
+		color: #fff;
+		box-sizing: border-box;
+
+		@include media ("<=xs") {
+			border: 1px solid #fff;
+			width: 100%;
+		}
+	}
+
+}

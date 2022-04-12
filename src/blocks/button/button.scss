@@ -1,0 +1,16 @@
+.button {
+	$self: &;
+	font-size: 22px;
+	line-height: 22px;
+	font-family: "HBL", sans-serif;
+	text-transform: uppercase;
+	color: $colorLink;
+	padding: 15px 30px;
+	border: 3px solid $colorLink;
+	box-sizing: border-box;
+
+	@include media("<=md") {
+		font-size: 18px;
+		line-height: 18px;
+	}
+}

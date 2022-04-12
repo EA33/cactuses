@@ -1,0 +1,22 @@
+.menu {
+	$self: &;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	max-width: 238px;
+
+	&__link {
+		margin-bottom: 25px;
+		transition: all 0.5s;
+		cursor: pointer;
+
+		&:hover {
+			color: $colorLink;
+		}
+
+		@include media ("<=md") {
+			margin-bottom: 24px;
+			margin-right: 0;
+		}
+	}
+}

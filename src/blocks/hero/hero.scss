@@ -1,0 +1,597 @@
+.hero {
+	$self: &;
+	margin-top: -170px;
+
+	@include media ("<=xxxlg") {
+		margin-top: -208px;
+	}
+
+	@include media ("<=lg") {
+		margin-top: -170px;
+	}
+
+	@include media ("<=md") {
+		margin-bottom: -150px;
+	}
+
+	@include media ("<=xs") {
+		margin-bottom: 0;
+	}
+
+	&__wrapper {
+		display: flex;
+		min-height: 735px;
+		height: 100%;
+	}
+
+	&__slide-inner {
+		display: flex;
+		max-width: 1285px;
+		width: 100%;
+		padding-top: 60px;
+
+		@include media ("<=xs") {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		max-width: 270px;
+		margin-top: 81px;
+		display: flex;
+		flex-direction: column;
+		flex-shrink: 0;
+		z-index: 2;
+
+		@include media ("<=xxxlg") {
+			margin-top: 111px;
+		}
+
+		@include media ("<=xxlg") {
+			margin-top: 100px;
+		}
+
+		@include media ("<=xlg") {
+			margin-top: 81px;
+		}
+
+		@include media ("<=xs") {
+			flex-direction: row;
+			width: 100%;
+			max-width: none;
+		}
+	}
+
+	&__left-discount {
+		font-family: "HB", sans-serif;
+		font-size: 46px;
+		line-height: 52px;
+		color: $colorLink;
+		min-width: 176px;
+
+		@include media("<=xlg") {
+			font-size: 36px;
+			line-height: 63px;
+			margin-top: 7px;
+		}
+
+		@include media ("<=md") {
+			font-size: 26px;
+			line-height: 40px;
+			margin-top: -35px;
+		}
+
+		@include media ("<=sm") {
+			margin-top: -40px;
+		}
+
+		@include media ("<=xs") {
+			min-width: 0;
+			margin-top: -20px;
+			margin-bottom: -40px;
+			max-width: 300px;
+			margin-left: auto;
+		}
+	}
+
+	&__left-title {
+		font-size: 24px;
+		line-height: 40px;
+		position: absolute;
+		top: 470px;
+		text-transform: uppercase;
+		margin-bottom: 40px;
+
+		// @include media("<=xxxlg"){
+		// 	top: 475px;
+		// }
+		@include media("<=xxlg") {
+			top: 495px;
+		}
+
+		@include media("<=xlg") {
+			font-size: 20px;
+			line-height: 36px;
+			top: 420px;
+		}
+
+		@include media("<=lg") {
+			top: 450px;
+		}
+
+		@include media("<=md") {
+			font-size: 18px;
+			line-height: 30px;
+			// top: 37.3%;
+			top: 340px;
+		}
+
+		@include media("<=sm") {
+			top: 335px;
+		}
+
+		@include media("<=xs") {
+			top: 160px;
+			left: 40px;
+		}
+
+		@include media("<=xxs") {
+			left: 15px;
+		}
+
+		span {
+			font-family: "HM", sans-serif;
+		}
+	}
+
+	&__left-bullets.swiper-pagination .swiper-pagination-bullet {
+		margin-right: 20px;
+
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+
+	&__left-bullets.swiper-pagination {
+		position: absolute;
+		top: 613px;
+		left: 390px;
+		max-height: 30px;
+		width: 270px;
+
+		@include media("<=xxxlg") {
+			left: 300px;
+		}
+
+		@include media("<=xxlg") {
+			top: 639px;
+		}
+
+		@include media("<=xlg") {
+			left: 261px;
+			top: 555px;
+		}
+
+		@include media("<=lg") {
+			left: 36px;
+			top: 555px;
+		}
+
+		@include media("<=md") {
+			top: 433px;
+
+		}
+
+		@include media("<=sm") {
+			top: 428px;
+
+		}
+
+		@include media("<=xs") {
+			right: 40px;
+			justify-content: flex-end;
+			margin-left: auto;
+			top: 163px;
+		}
+
+		@include media("<=xxs") {
+			right: 15px;
+
+		}
+	}
+
+	&__left-scroll {
+		display: block;
+		background: url(images/icons-sprite.svg#icon-arrdown-view-black) bottom left/ 59px 28px no-repeat transparent;
+		padding: 15px 30px;
+		margin-bottom: -32px;
+		position: relative;
+		top: 590px;
+		left: 0;
+
+		@include media("<=xxxlg") {
+			top: 565px;
+		}
+
+		@include media("<=xxlg") {
+			top: 557px;
+		}
+
+		@include media("<=xlg") {
+			top: 500px;
+		}
+
+		@include media("<=lg") {
+			top: 530px;
+		}
+
+		@include media("<=md") {
+			background: url(images/icons-sprite.svg#icon-arrdown-view-black) bottom left/ 33px 15px no-repeat transparent;
+			padding: 8px 15px;
+			top: 385px;
+		}
+
+		@include media("<=xs") {
+			top: 495px;
+		}
+
+		@include media("<=xxs") {
+			top: 580px;
+		}
+	}
+
+	&__img-circle {
+		height: 800px;
+		width: 800px;
+		border-radius: 50%;
+		background-color: #fff;
+		margin: -28px 0 30px -114px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-shrink: 0;
+
+		@include media("<=xxxlg") {
+			width: 715px;
+			height: 715px;
+			margin-top: -20px;
+		}
+
+		@include media("<=xxlg") {
+			width: 615px;
+			height: 615px;
+		}
+
+		@include media("<=xlg") {
+			width: 575px;
+			height: 575px;
+		}
+
+		@include media("<=lg") {
+			width: 600px;
+			height: 600px;
+			margin-right: -40px;
+		}
+
+		@include media("<=md") {
+			width: 495px;
+			height: 495px;
+		}
+
+		@include media("<=sm") {
+			width: 365px;
+			height: 365px;
+			margin-right: -50px;
+		}
+
+		@include media ("<=xs") {
+			margin: -40px auto 0;
+		}
+
+		@include media ("<=xxs") {
+			width: 330px;
+			height: 330px;
+		}
+	}
+
+	&__img {
+		flex-shrink: 3;
+		max-width: 560px;
+
+		@include media("<=xxxlg") {
+			width: 500px;
+		}
+
+		@include media("<=xxlg") {
+			width: 430px;
+		}
+
+		@include media("<=xlg") {
+			width: 400px;
+		}
+
+		@include media("<=md") {
+			width: 340px;
+		}
+
+		@include media("<=sm") {
+			width: 220px;
+		}
+
+		@include media("<=xs") {
+			width: 190px;
+			margin-top: -120px;
+		}
+
+		@include media("<=xxs") {
+			width: 220px;
+			margin-top: 0
+		}
+	}
+
+	&__right {
+		max-width: 415px;
+		margin-left: -116px;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		z-index: 1;
+
+		@include media ("<=xxxlg") {
+			margin-top: 15px;
+		}
+
+		@include media ("<=xlg") {
+			margin-top: 80px;
+			margin-bottom: -140px;
+		}
+
+		@include media ("<=lg") {
+			margin-left: -30px;
+		}
+
+		@include media ("<=md") {
+			margin-top: 40px;
+		}
+
+		@include media ("<=xs") {
+			margin: -170px auto 0;
+			width: 100%;
+			max-width: none;
+		}
+
+		@include media ("<=xxs") {
+			margin-top: -100px;
+		}
+	}
+
+	&__right-title {
+		margin-bottom: 60px;
+		margin-top: 70px;
+		min-height: 120px;
+		font-size: 46px;
+		line-height: 73px;
+		font-family: "HM", sans-serif;
+
+		span {
+			font-family: "HR", sans-serif;
+		}
+
+		@include media("<=xxxlg") {}
+
+		@include media("<=xlg") {
+			font-size: 36px;
+			line-height: 63px;
+			margin-bottom: 40px;
+			margin-top: 0;
+		}
+
+		@include media ("<=md") {
+			font-size: 26px;
+			line-height: 40px;
+		}
+
+		@include media ("<=xs") {
+			text-align: center;
+			margin-top: 40px;
+		}
+
+		@include media("<=xxs") {
+			margin-top: 80px;
+		}
+	}
+
+	&__right-prices {
+		display: flex;
+		margin-bottom: 40px;
+
+		@include media ("<=xs") {
+			justify-content: center;
+		}
+	}
+
+	&__right-pricebox {
+		&:first-child {
+			margin-right: 40px;
+
+			@include media ("<=xlg") {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	&__right-name {
+		font-size: 22px;
+		line-height: 22px;
+		margin-bottom: 10px;
+
+		@include media("<=xlg") {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		@include media("<=lg") {
+			font-size: 16px;
+			line-height: 16px;
+		}
+	}
+
+	&__right-price {
+		font-size: 32px;
+		line-height: 32px;
+		font-family: "HM", sans-serif;
+
+		@include media("<=xlg") {
+			font-size: 26px;
+			line-height: 26px;
+		}
+
+		@include media ("<=md") {
+			font-size: 20px;
+			line-height: 20px;
+		}
+	}
+
+	&__right-buttons {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		max-width: 415px;
+		width: 100%;
+		position: absolute;
+		left: 208.3%;
+		bottom: 267px;
+		z-index: 2;
+
+		@include media("<=xxxlg") {
+			left: 187.4%;
+			bottom: 80px;
+			width: auto;
+		}
+
+		@include media("<=xxlg") {
+			left: 163.4%;
+			bottom: 31px;
+		}
+
+		@include media("<=xlg") {
+			left: 154%;
+			bottom: 182px;
+		}
+
+		@include media("<=lg") {
+			left: 150%;
+		}
+
+		@include media("<=md") {
+			left: 125%;
+			bottom: 127px;
+		}
+
+		@include media("<=sm") {
+			left: 91%;
+		}
+
+		@include media("<=xs") {
+			bottom: -169px;
+			justify-content: center;
+			left: 0;
+			right: 0;
+			max-width: none;
+			flex-direction: column;
+		}
+
+		@include media("<=xxs") {
+			bottom: -187px;
+
+		}
+
+	}
+
+	&__right-btnorder {
+		font-size: 22px;
+		font-family: "HBL", sans-serif;
+		text-transform: uppercase;
+		color: $colorLink;
+		padding: 15px 30px;
+		border: 3px solid $colorLink;
+		margin-right: 40px;
+
+		@include media("<=xxxlg") {
+			margin-bottom: 40px;
+		}
+
+		@include media("<=md") {
+			font-size: 18px;
+			line-height: 18px;
+		}
+
+		@include media("<=xs") {
+			margin-right: 0;
+			// width: 100%;
+		}
+	}
+
+	&__right-linkview {
+		@include media("<=xxxlg") {
+			margin-bottom: 40px;
+		}
+
+		@include media("<=xs") {
+			min-width: 115px
+		}
+	}
+
+	&__right-arrows {
+		max-width: 100px;
+		width: 100%;
+		margin: -70px 315px 20px auto;
+		display: flex;
+		justify-content: space-between;
+		position: absolute;
+		bottom: 45px;
+		left: 865px;
+
+		@include media("<=xxxlg") {
+			left: 187.4%;
+			bottom: -30px;
+		}
+
+		@include media("<=xxlg") {
+			bottom: -70px;
+			left: 163.4%;
+		}
+
+		@include media("<=xlg") {
+			left: 154%;
+			bottom: 50px;
+		}
+
+		@include media("<=lg") {
+			left: 150%;
+			bottom: 60px;
+		}
+
+		@include media("<=md") {
+			max-width: 56px;
+			left: 125%;
+			bottom: 20px;
+		}
+
+		@include media("<=sm") {
+			left: 91%;
+		}
+
+		@include media("<=xs") {
+			right: 0;
+			left: 0;
+			margin-right: 0;
+			bottom: -165px;
+		}
+
+		@include media ("<=xxs") {
+			bottom: -180px;
+		}
+	}
+
+}

@@ -1,0 +1,26 @@
+.swiper-pagination {
+	$self: &;
+	display: flex;
+	align-items: center;
+
+	&-bullet {
+		margin-right: 20px;
+		background-color: $colorLink;
+		opacity: 1;
+		&-active {
+			width: 11px;
+			height: 11px;
+			background-color: transparent;
+			border: 3px solid $colorLink;
+		}
+		&:last-child {
+			margin-right: 0;
+		}
+	}
+}
+// .swiper-pagination .swiper-pagination-bullets {
+// 	.swiper-pagination-bullet {
+// 		margin-right: 20px;
+
+// 	}
+// }

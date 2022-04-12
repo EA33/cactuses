@@ -1,0 +1,31 @@
+.container {
+	$self: &;
+	margin: 0 auto 0 375px;
+	padding: 0 15px;
+	box-sizing: border-box;
+	// position: relative;
+	max-width: 1285px;
+	min-width: 0;
+	width: 100%;
+	@include media ("<=xxxlg") {	
+		max-width: calc(94.22% - 290px); 
+		margin-left: 290px;
+	}
+	@include media ("<=xxlg") {	
+		max-width: calc(97.22% - 290px); 
+		margin-left: 290px;
+	}
+	@include media ("<=xlg") {
+		max-width: calc(98.65% - 250px); 
+		margin-left: 250px;
+	}
+	@include media ("<=lg") {
+		max-width: 100%;
+		margin-left: 0;
+		padding: 0 40px;
+	}
+	@include media ("<=xxs") {
+		padding: 0 15px;
+	}
+}
+

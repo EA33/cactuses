@@ -1,0 +1,126 @@
+.header {
+	$self: &;
+	background-color: $bg;
+	min-height: 100vh;
+
+	@include media ("<=xxxlg") {
+		padding-bottom: 60px;
+	}
+
+	@include media ("<=xxlg") {
+		padding-bottom: 70px;
+	}
+
+	@include media ("<=xlg") {
+		padding-bottom: 0;
+	}
+
+	@include media ("<=md") {
+		min-height: auto;
+	}
+
+	@include media ("<=xs") {
+		padding-bottom: 40px;
+	}
+
+	&__content {
+		width: auto;
+		display: flex;
+		flex-direction: column;
+
+		@include media ("<=xlg") {
+			padding: 0 15px 160px;
+		}
+
+		@include media ("<=lg") {
+			padding: 0 40px 150px;
+		}
+
+		@include media ("<=xxs") {
+			margin-bottom: 164px;
+			padding: 0 15px;
+		}
+	}
+
+	&__top {
+		margin: 70px 0 52px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+
+	&__top-menu {
+		display: none;
+		padding: 20px;
+		background: url(images/icons-sprite.svg#icon-menu-view-green) center / 40px 30px no-repeat transparent;
+		margin-right: 40px;
+		cursor: pointer;
+		position: relative;
+		z-index: 5;
+
+		@include media ("<=lg") {
+			display: block;
+			margin-right: auto;
+		}
+	}
+
+	&__top-link {
+		font-size: 20px;
+		font-family: "HM", sans-serif;
+		margin-right: 10px;
+
+		@include media ("<=xxlg") {
+			display: block;
+		}
+
+		@include media ("<=lg") {
+			max-width: 175px;
+		}
+
+		&_cards {
+			display: block;
+			min-width: 175px;
+			margin-right: 575px;
+			font-size: 16px;
+			font-family: "HR", sans-serif;
+
+			@include media ("<=xxxlg") {
+				margin-right: 490px;
+			}
+
+			@include media ("<=xxlg") {
+				margin-right: 390px;
+			}
+
+			@include media ("<=xlg") {
+				display: flex;
+				flex-shrink: 0;
+				margin-right: 347px;
+			}
+
+			@include media ("<=lg") {
+				display: none;
+			}
+		}
+
+		span {
+			color: $colorLink;
+		}
+	}
+
+	&__top-phones {
+		max-width: 574px;
+		width: 100%;
+
+		@include media ("<=xxxlg") {
+			max-width: 573px;
+		}
+
+		@include media ("<=lg") {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			margin: 0 20px 0 30px;
+		}
+	}
+}

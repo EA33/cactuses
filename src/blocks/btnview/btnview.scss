@@ -1,0 +1,25 @@
+.btnview {
+	$self: &;
+	display: inline-block;
+	font-family: "HB", sans-serif;
+	text-transform: uppercase;
+	transition: all 0.5s;
+	@include media("<=md"){
+		font-size: 14px;
+		line-height: 14px;
+	}
+	
+	&::after {
+		content: "";
+		margin-top: 3px;
+		display: block;
+		border-bottom: 1px solid #000;
+	}
+	&:hover {
+		color: $colorLink;
+		&::after {
+			border-color: $colorLink;
+		}
+	}
+}
+
