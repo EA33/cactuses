@@ -39,11 +39,16 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
         }
     });
 
-    $('.header-leftside').on('click', 'a[href^="#"]', function (e) {
+    $(".hero__left-scroll").on('click', 'a[href^="#"]', function (e) {
         e.preventDefault();
         let $element = $($(this).attr('href'));
 
-        $('html, body').animate({ scrollTop: $element.offset().top }, "slow");
+        $("html, body").animate({ scrollTop: $element.offset().top }, "slow");
+    });
+
+    $("a[href='#header']").on('click', function (e) {
+        e.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
     });
 
     $(window).on('scroll', function () {
