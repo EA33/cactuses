@@ -105,6 +105,10 @@
 
 		span {
 			color: $colorLink;
+
+			@include media ("<=xlg") {
+				margin-left: 5px;
+			}
 		}
 	}
 

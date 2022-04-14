@@ -1,9 +1,9 @@
 .care {
 	$self: &;
-	margin: 170px auto;
+	margin: 95px auto;
 
 	@include media ("<=md") {
-		margin: 94px auto 70px;
+		margin: 44px auto 70px;
 	}
 
 	&__items {
@@ -11,6 +11,7 @@
 		flex-wrap: wrap;
 		justify-content: space-between;
 		margin: 0 -8px -123px;
+		padding-top: 75px;
 
 		@include media ("<=xxlg") {
 			justify-content: flex-end;

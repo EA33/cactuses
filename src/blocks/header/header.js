@@ -16,6 +16,7 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
     let $menu = $('.leftside');
     let $toggle = $('.header__top-menu');
+
     $('.menu').on('click', 'a[href^="#"]', function (e) {
         e.preventDefault();
         let $element = $($(this).attr('href'));
