@@ -34,6 +34,15 @@
 		}
 	}
 
+	&__menu.menu {
+		&:hover {
+			.menu__link {
+				color: #DFFFE9;
+
+			}
+		}
+	}
+
 	&__social-list {
 		display: flex;
 		flex-direction: column;
