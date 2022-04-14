@@ -16,6 +16,16 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
 
     let $menu = $('.leftside');
     let $toggle = $('.header__top-menu');
+    $('.menu').on('click', 'a[href^="#"]', function (e) {
+        e.preventDefault();
+        let $element = $($(this).attr('href'));
+
+        $('html, body').animate({ scrollTop: $element.offset().top }, "slow", function () {
+            $toggle.removeClass('opened');
+            $menu.removeClass('opened');
+            enablePageScroll();
+        });
+    });
 
     $('.header__top-menu').on('click', function (e) {
         e.preventDefault();
@@ -39,7 +49,7 @@ import { disablePageScroll, enablePageScroll } from 'scroll-lock';
         }
     });
 
-    $(".hero__left-scroll").on('click', 'a[href^="#"]', function (e) {
+    $('a[href^="#form"]').on('click', function (e) {
         e.preventDefault();
         let $element = $($(this).attr('href'));
 
