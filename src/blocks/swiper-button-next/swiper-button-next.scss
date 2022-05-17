@@ -1,13 +1,15 @@
 .swiper-button-next {
 	$self: &;
 	position: static;
+
 	&::after {
 		content: "";
-		background: url(images/icons-sprite.svg#icon-arrow-right-view-black)center right / 30px 60px  no-repeat transparent;
+		background: url(images/icons-sprite.svg#icon-arrow-right-view-black) center right / 30px 60px no-repeat transparent;
 		padding: 30px 15px;
 		margin-left: auto;
+
 		@include media ("<=md") {
-			background: url(images/icons-sprite.svg#icon-arrow-right-view-black)center right / 15px 33px  no-repeat transparent;
+			background: url(images/icons-sprite.svg#icon-arrow-right-view-black) center right / 15px 33px no-repeat transparent;
 			padding: 15px 8px;
 		}
 	}

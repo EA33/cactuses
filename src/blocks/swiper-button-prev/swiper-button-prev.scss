@@ -1,13 +1,15 @@
 .swiper-button-prev {
 	$self: &;
 	position: static;
+
 	&::after {
 		content: "";
-		background: url(images/icons-sprite.svg#icon-arrow-left-view-black)center left / 30px 60px no-repeat transparent;
+		background: url(images/icons-sprite.svg#icon-arrow-left-view-black) center left / 30px 60px no-repeat transparent;
 		padding: 30px 15px;
 		margin-right: auto;
+
 		@include media ("<=md") {
-			background: url(images/icons-sprite.svg#icon-arrow-left-view-black)center right / 15px 33px  no-repeat transparent;
+			background: url(images/icons-sprite.svg#icon-arrow-left-view-black) center right / 15px 33px no-repeat transparent;
 			padding: 15px 8px;
 		}
 	}
