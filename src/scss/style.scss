@@ -1,8 +1,8 @@
-@import "lib/additional.scss"; 
-@include reset(); 
+@import "lib/additional.scss";
+@include reset();
 
 // Include breakpoints badge
-body { @include screen-media(); }
+// body { @include screen-media(); }
 
 // Import media-query helper
 @import "../../node_modules/include-media/dist/_include-media.scss";
@@ -22,36 +22,37 @@ $breakpoints: (
 
 // Import animate-scss
 // @import
-	// "../../node_modules/animate-scss/properties",
-	// "../../node_modules/animate-scss/_attention-seekers/attention-seekers.scss",
-	// "../../node_modules/animate-scss/_bouncing-entrances/bouncing-entrances.scss",
-	// "../../node_modules/animate-scss/_bouncing-exits/bouncing-exits.scss",
-	// "../../node_modules/animate-scss/_fading-entrances/fading-entrances.scss",
-	// "../../node_modules/animate-scss/_fading-exits/fading-exits.scss",
-	// "../../node_modules/animate-scss/_flippers/flippers.scss",
-	// "../../node_modules/animate-scss/_lightspeed/lightspeed.scss",
-	// "../../node_modules/animate-scss/_rotating-entrances/rotating-entrances.scss",
-	// "../../node_modules/animate-scss/_rotating-exits/rotating-exits.scss",
-	// "../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss",
-	// "../../node_modules/animate-scss/_sliding-exits/sliding-exits.scss",
-	// "../../node_modules/animate-scss/_specials/specials.scss",
-	// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
-	// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
+// "../../node_modules/animate-scss/properties",
+// "../../node_modules/animate-scss/_attention-seekers/attention-seekers.scss",
+// "../../node_modules/animate-scss/_bouncing-entrances/bouncing-entrances.scss",
+// "../../node_modules/animate-scss/_bouncing-exits/bouncing-exits.scss",
+// "../../node_modules/animate-scss/_fading-entrances/fading-entrances.scss",
+// "../../node_modules/animate-scss/_fading-exits/fading-exits.scss",
+// "../../node_modules/animate-scss/_flippers/flippers.scss",
+// "../../node_modules/animate-scss/_lightspeed/lightspeed.scss",
+// "../../node_modules/animate-scss/_rotating-entrances/rotating-entrances.scss",
+// "../../node_modules/animate-scss/_rotating-exits/rotating-exits.scss",
+// "../../node_modules/animate-scss/_sliding-entrances/sliding-entrances.scss",
+// "../../node_modules/animate-scss/_sliding-exits/sliding-exits.scss",
+// "../../node_modules/animate-scss/_specials/specials.scss",
+// "../../node_modules/animate-scss/_zooming-exits/zooming-exits.scss",
+// "../../node_modules/animate-scss/_zooming-entrances/zooming-entrances.scss";
 
-	@include font-face("HelveticaRegular", "HR");
-	@include font-face("HelveticaMedium", "HM");
-	@include font-face("HelveticaBold", "HB");
-	@include font-face("HelveticaBlack", "HBL");
+@include font-face("HelveticaRegular", "HR");
+@include font-face("HelveticaMedium", "HM");
+@include font-face("HelveticaBold", "HB");
+@include font-face("HelveticaBlack", "HBL");
 // @import "../../node_modules/owl.carousel/dist/assets/owl.carousel";
-	@import "../../node_modules/swiper/swiper";
-	@import "../../node_modules/swiper/components/pagination/pagination";
-	@import "../../node_modules/swiper/components/navigation/navigation";
+@import "../../node_modules/swiper/swiper";
+@import "../../node_modules/swiper/components/pagination/pagination";
+@import "../../node_modules/swiper/components/navigation/navigation";
 
 
 // Import BEM blocks scss
 @import "../blocks/**/*.scss";
 
-body, html {
+body,
+html {
 	box-sizing: border-box;
 	font-size: #{$basesize}px;
 	line-height: calc(#{$basesize}px * 1.6);
@@ -62,14 +63,27 @@ body, html {
 	display: flex;
 	flex-flow: column nowrap;
 }
+
 // .main { flex: 1 0 auto; }
-.footer { 
-	flex: 0 0 auto; 
-	margin-top: auto; 
+.footer {
+	flex: 0 0 auto;
+	margin-top: auto;
 }
 
 
-p { margin-bottom: 10px; }
-strong { font-weight: bold; }
-em { font-style: italic; }
-a { text-decoration: none; color: inherit; }
+p {
+	margin-bottom: 10px;
+}
+
+strong {
+	font-weight: bold;
+}
+
+em {
+	font-style: italic;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}
